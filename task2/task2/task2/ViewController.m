@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *paragraphLabel;
 
 @end
 
@@ -22,6 +23,13 @@
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
+}
+
+//Clear Button
+- (IBAction)clearAction:(id)sender {
+    if (self) {
+        self.paragraphLabel.text = @"";
+    }
 }
 
 @end
