@@ -46,8 +46,8 @@
     }
     
     else {
-    //NSString * l2 = @"Curabitur dignissim ligula ex, eu ultricies urna sodales eget. Nullam vitae lacus eu sem egestas tempus sit amet sit amet mi. Nulla eu feugiat erat. \n";
-    NSString * l2 = @"Paragraph \n";
+    NSString * l2 = @"Curabitur dignissim ligula ex, eu ultricies urna sodales eget. Nullam vitae lacus eu sem egestas tempus sit amet sit amet mi. Nulla eu feugiat erat. \n";
+    //NSString * l2 = @"Paragraph \n";
     NSMutableAttributedString * content2 = [[NSMutableAttributedString alloc]initWithString:l2
                                                                                  attributes:@{NSFontAttributeName: [UIFont fontWithName:[self randomFonts] size:[self randomSize]],NSForegroundColorAttributeName: [self randomColor]}];
         
