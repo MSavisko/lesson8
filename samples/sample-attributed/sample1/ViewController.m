@@ -84,10 +84,10 @@
 - (void)printSystemFonts {
 	NSMutableString *fonts = [NSMutableString new];
 	for (NSString *fontFamily in [UIFont familyNames]) {
-		[fonts appendFormat:@"%@\n", fontFamily];
-		NSLog(@"%@", fontFamily);
+		//[fonts appendFormat:@"%@\n", fontFamily];
+		//NSLog(@"%@", fontFamily);
 		for (NSString *fontName in [UIFont fontNamesForFamilyName:fontFamily]) {
-			[fonts appendFormat:@"              %@\n", fontName];
+			[fonts appendFormat:@"%@\n", fontName];
 		}
 	}
 	NSLog(@"%@", fonts);

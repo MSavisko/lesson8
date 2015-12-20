@@ -23,7 +23,7 @@
     
     [self initNewParahraph];
     self.paragraphLabel.attributedText = self.content;
-    [self.paragraphLabel sizeToFit];
+    //[self.paragraphLabel sizeToFit];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,13 +48,33 @@
     else {
     NSString * l2 = @"Paragraph\n";
     NSMutableAttributedString * content2 = [[NSMutableAttributedString alloc]initWithString:l2
-                                                                                 attributes:@{NSFontAttributeName: [UIFont fontWithName:@"Avenir-Heavy" size:17],NSForegroundColorAttributeName: [UIColor colorWithRed:0.251 green:15.000 blue:0.502 alpha:1]}];
+                                                                                 attributes:@{NSFontAttributeName: [UIFont fontWithName:[self randomFonts] size:[self randomSize]],NSForegroundColorAttributeName: [self randomColor]}];
     [self.content appendAttributedString:content2];
     self.clear = NO;
     }
-    
     self.paragraphLabel.attributedText = self.content;
-    [self.paragraphLabel sizeToFit];
+    //[self.paragraphLabel sizeToFit];
+}
+
+//Random Font
+- (NSString *) randomFonts {
+    NSArray *array = [[NSArray  alloc]initWithArray:[UIFont familyNames]];
+    return [array objectAtIndex:arc4random() % [array count]];
+}
+
+//Random Font Size
+- (int) randomSize {
+    int number = arc4random_uniform(36) + 8;
+    return number;
+}
+
+//Random Color
+- (UIColor *) randomColor {
+    CGFloat hue = ( arc4random() % 256 / 256.0 );
+    CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;
+    CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;
+    UIColor *color = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
+    return color;
 }
 
 //Clear Button
