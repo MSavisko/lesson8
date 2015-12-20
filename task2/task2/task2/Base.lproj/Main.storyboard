@@ -37,8 +37,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dZ-66-nEe">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvT-Ah-tTm">
-                                        <rect key="frame" x="10" y="10" width="94" height="60"/>
+                                    <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvT-Ah-tTm">
+                                        <rect key="frame" x="10" y="8" width="94" height="60"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Paragraph 1  Paragraph 2">
                                                 <attributes>
@@ -52,10 +52,15 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="uvT-Ah-tTm" firstAttribute="leading" secondItem="5dZ-66-nEe" secondAttribute="leading" constant="10" id="9dL-7A-wox"/>
-                                    <constraint firstItem="uvT-Ah-tTm" firstAttribute="top" secondItem="5dZ-66-nEe" secondAttribute="top" constant="10" id="CLx-fq-oQ7"/>
-                                    <constraint firstAttribute="bottom" secondItem="uvT-Ah-tTm" secondAttribute="bottom" constant="10" id="cPE-u5-2OY"/>
-                                    <constraint firstAttribute="trailing" secondItem="uvT-Ah-tTm" secondAttribute="trailing" constant="10" id="xxI-N8-bw7"/>
+                                    <constraint firstItem="uvT-Ah-tTm" firstAttribute="top" secondItem="5dZ-66-nEe" secondAttribute="top" constant="8" id="CLx-fq-oQ7"/>
+                                    <constraint firstAttribute="trailing" secondItem="uvT-Ah-tTm" secondAttribute="trailing" constant="8" id="VP7-cd-mVe"/>
+                                    <constraint firstAttribute="bottom" secondItem="uvT-Ah-tTm" secondAttribute="bottom" constant="466" id="cPE-u5-2OY"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="320" height="920"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -80,6 +85,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="paragraphLabel" destination="uvT-Ah-tTm" id="4cs-qP-mQP"/>
+                        <outlet property="scrollView" destination="5dZ-66-nEe" id="g8N-tt-tdC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
