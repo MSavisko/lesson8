@@ -25,11 +25,27 @@
 	// Dispose of any resources that can be recreated.
 }
 
+- (void)addNewParagraph {
+    if ([self.paragraphLabel.text  isEqual: @""]) {
+        self.paragraphLabel.text = @"\n New Paragraph";
+    }
+    else {
+        self.paragraphLabel.text = @"\n Paragraph";
+    }
+    [self.paragraphLabel sizeToFit];
+}
+
 //Clear Button
 - (IBAction)clearAction:(id)sender {
     if (self) {
         self.paragraphLabel.text = @"";
     }
+}
+
+//Add Button
+- (IBAction)addAction:(id)sender {
+    //Add method, that add a new paragraph
+    [self addNewParagraph];
 }
 
 @end

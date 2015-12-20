@@ -77,7 +77,7 @@
 	[content replaceCharactersInRange:NSMakeRange(end, 0) withString:@"\n"];
 	[content appendAttributedString:content2];
 	
-//	self.headerLabel.attributedText = content;
+	self.headerLabel.attributedText = content;
 	[self printSystemFonts];
 }
 
